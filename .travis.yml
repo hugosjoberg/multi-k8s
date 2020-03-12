@@ -9,10 +9,10 @@ script:
     - docker run -e CI=true hsjoberg/react-test npm test
 
 after_success:
-    - docker build -t hsjoberg/multi-client -f ./client
-    - docker build -t hsjoberg/multi-nginx -f ./nginx
-    - docker build -t hsjoberg/multi-server -f ./server
-    - docker build -t hsjoberg/multi-worker -f ./worker
+    - docker build -t hsjoberg/multi-client ./client
+    - docker build -t hsjoberg/multi-nginx ./nginx
+    - docker build -t hsjoberg/multi-server ./server
+    - docker build -t hsjoberg/multi-worker ./worker
     # Log into docker-hub
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     # Push images to docker hub
