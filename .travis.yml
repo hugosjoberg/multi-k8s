@@ -18,7 +18,7 @@ befor_install:
   - docker build -t hsjoberg/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true hsjoberg/docker-react npm run test
+  - docker run -e CI=true hsjoberg/react-test npm run test
 
 deploy:
   provider: script
