@@ -9,5 +9,5 @@ docker push hsjoberg/multi-worker:latest
 docker push hsjoberg/multi-worker:$SHA
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=hsjoberg/multi-server:$SHA
-kubectl set image deployments/client-deployment server=hsjoberg/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=hsjoberg/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=hsjoberg/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=hsjoberg/multi-worker:$SHA
