@@ -3,8 +3,8 @@ docker build -t hsjoberg/mutli-server:latest -t hsjoberg/multi-server:$SHA -f ./
 docker build -t hsjoberg/multi-worker:latest -t hsjoberg/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push hsjoberg/multi-client:latest
 docker push hsjoberg/multi-client:$SHA
-docker push hsjoberg/mutli-server:latest
-docker push hsjoberg/mutli-server:$SHA
+docker push hsjoberg/multi-server:latest
+docker push hsjoberg/multi-server:$SHA
 docker push hsjoberg/multi-worker:latest
 docker push hsjoberg/multi-worker:$SHA
 kubectl apply -f k8s
